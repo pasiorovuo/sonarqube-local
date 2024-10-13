@@ -12,5 +12,5 @@ mkdir -p "${dir}/bin"
     curl -O "https://raw.githubusercontent.com/SonarSource/sonar-scanner-cli-docker/refs/heads/master/bin/entrypoint.sh" &&
     chmod +x "entrypoint.sh"
     cd - &&
-    docker build -t sonarqube-sonarscanner:latest .
+    docker build -t sonarscanner-cli:latest .
 )

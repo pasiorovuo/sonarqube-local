@@ -13,5 +13,5 @@ services:
       start_period: 5s
     volumes:
       - './data:/opt/sonarqube/data:rw'
-      - './extensions:/opt/sonarqube/logs:rw'
+      - './extensions:/opt/sonarqube/extensions:rw'
       - './logs:/opt/sonarqube/logs:rw'

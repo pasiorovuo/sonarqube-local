@@ -1,0 +1,17 @@
+
+services:
+  sonarqube:
+    image: sonarqube:10.6-community
+    ports:
+      - '9000:9000'
+    stop_grace_period: 60m
+    healthcheck:
+      test: ['CMD-SHELL', 'curl -u admin:admin http://localhost:9000/api/system/health']
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 5s
+    volumes:
+      - './data:/opt/sonarqube/data:rw'
+      - './extensions:/opt/sonarqube/logs:rw'
+      - './logs:/opt/sonarqube/logs:rw'

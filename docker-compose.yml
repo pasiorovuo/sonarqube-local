@@ -6,7 +6,7 @@ services:
       - '9000:9000'
     stop_grace_period: 60m
     healthcheck:
-      test: ['CMD-SHELL', 'curl -u admin:admin http://localhost:9000/api/system/health']
+      test: ['CMD-SHELL', 'curl -f http://localhost:9000/ > /dev/null']
       interval: 5s
       timeout: 2s
       retries: 5

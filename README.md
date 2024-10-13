@@ -28,5 +28,5 @@ its needed to run the code analysis.
 bash build-sonarscanner-cli-docker.sh
 
 # Run code analysis
-docker run -it --rm --network sonarqube_default -v /path/to/project:/usr/src sonarqube-sonarscanner:latest -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=admin -Dsonar.password='<password>' -Dsonar.projectKey=lt:nameofproject2
+docker run -it --rm --network sonarqube_default -v /path/to/project:/usr/src sonarqube-sonarscanner:latest -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=admin -Dsonar.password='<password>' -Dsonar.projectKey='<project:key>'
 ```
